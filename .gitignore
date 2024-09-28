@@ -22,3 +22,6 @@ ndkpath.txt
 !mod.template.json
 
 cmake-build-debug
+
+!release.ps1
+!releasedelete.ps1
