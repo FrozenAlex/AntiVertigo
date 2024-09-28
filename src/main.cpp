@@ -17,22 +17,25 @@
 #include "Installers/AppInstaller.hpp"
 #include "Installers/GameInstaller.hpp"
 #include "Installers/MenuInstaller.hpp"
+#include "logging.hpp"
 
-static ModInfo modInfo;
+inline modloader::ModInfo modInfo = {MOD_ID, VERSION, 0}; // Stores the ID and version of our mod, and is sent to the modloader upon startup
 
-extern "C" void Setup(ModInfo info)
+extern "C" __attribute__((visibility("default"))) void setup(CModInfo& info)
 {
     info.id = MOD_ID;
     info.version = VERSION;
-    modInfo = info;
+    modInfo.assign(info);
+    INFO("Completed setup!");
 }
 
-extern "C" void load()
+extern "C" __attribute__((visibility("default"))) void late_load()
 {
     if (!LoadConfig())
         SaveConfig();
+        
     il2cpp_functions::Init();
-    Hooks::InstallHooks(getLogger());
+    Hooks::InstallHooks();
     custom_types::Register::AutoRegister();
 
     auto zenjector = Lapiz::Zenject::Zenjector::Get();

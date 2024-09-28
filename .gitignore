@@ -14,6 +14,10 @@ ndkpath.txt
 !createqmod.ps1
 
 .vscode
+.idea
 *.json
 !qpm.json
+!qpm.shared.json
 !mod.template.json
+
+cmake-build-debug

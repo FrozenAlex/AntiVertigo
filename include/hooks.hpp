@@ -3,19 +3,20 @@
 #include <vector>
 #include "beatsaber-hook/shared/utils/logging.hpp"
 #include "beatsaber-hook/shared/utils/hooking.hpp"
+#include "logging.hpp"
 
 class Hooks {
     private:
-        static inline std::vector<void (*)(Logger& logger)> installFuncs;
+        static inline std::vector<void (*)()> installFuncs;
     public:
-        static inline void AddInstallFunc(void (*installFunc)(Logger& logger))
+        static inline void AddInstallFunc(void (*installFunc)())
         {
             installFuncs.push_back(installFunc);
         }
 
-        static inline void InstallHooks(Logger& logger)
+        static inline void InstallHooks()
         {
-            for (auto& func : installFuncs) func(logger);
+            for (auto& func : installFuncs) func();
         }
 };
 

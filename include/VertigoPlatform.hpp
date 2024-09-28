@@ -18,5 +18,5 @@ DECLARE_CLASS_CODEGEN_INTERFACES(AntiVertigo, VertigoPlatform, UnityEngine::Mono
     DECLARE_INSTANCE_METHOD(void, UpdateSize);
     DECLARE_INSTANCE_METHOD(void, SetMesh);
     DECLARE_INSTANCE_METHOD(void, CheckMaterials);
-    DECLARE_OVERRIDE_METHOD(void, Initialize, il2cpp_utils::il2cpp_type_check::MetadataGetter<&::Zenject::IInitializable::Initialize>::get());
+    DECLARE_OVERRIDE_METHOD_MATCH(void, Initialize, &Zenject::IInitializable::Initialize);
 )

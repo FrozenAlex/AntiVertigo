@@ -1,7 +1,7 @@
 #include "config.hpp"
 #include "logging.hpp"
 
-static ModInfo modInfo = {MOD_ID, VERSION};
+static modloader::ModInfo modInfo = {MOD_ID, VERSION, 0};
 config_t config;
 
 Configuration& getConfig()

@@ -1,7 +1,7 @@
 #pragma once
 #include "beatsaber-hook/shared/config/config-utils.hpp"
 #include "beatsaber-hook/shared/config/rapidjson-utils.hpp"
-#include "modloader/shared/modloader.hpp"
+#include "scotland2/shared/loader.hpp"
 #include <string>
 typedef enum _shape_t { CUBE = 0, CYLINDER = 1 } shape_t;
 

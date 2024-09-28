@@ -63,7 +63,8 @@ namespace AntiVertigo {
 
     UnityEngine::Material* VertigoPlatform::get_darkEnvironmentSimpleMaterial() {
         if (darkEnvironmentSimpleMaterial && darkEnvironmentSimpleMaterial->m_CachedPtr.m_value) return darkEnvironmentSimpleMaterial;
-        return darkEnvironmentSimpleMaterial = UnityEngine::Resources::FindObjectsOfTypeAll<UnityEngine::Material*>().FirstOrDefault([](auto mat){ return mat && mat->get_name() == "DarkEnvironmentSimple";});
+        darkEnvironmentSimpleMaterial = UnityEngine::Resources::FindObjectsOfTypeAll<UnityEngine::Material*>()->FirstOrDefault([](auto mat){ return mat && mat->get_name() == "DarkEnvironmentSimple";});
+        return darkEnvironmentSimpleMaterial;
     }
 
     void VertigoPlatform::CheckMaterials() {

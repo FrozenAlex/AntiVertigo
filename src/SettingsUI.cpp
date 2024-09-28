@@ -13,12 +13,14 @@ namespace AntiVertigo {
         _platform = platform;
     }
 
-    ListWrapper<Il2CppObject*> SettingsUI::get_shape_options() {
+    ListW<System::Object*> SettingsUI::get_shape_options() {
         if (!_shape_options) {
-            _shape_options = List<Il2CppObject*>::New_ctor();
-            _shape_options->Add(StringW("Cube"));
-            _shape_options->Add(StringW("Cylinder"));
+            _shape_options = ListW<System::Object*>::New();
+            _shape_options->EnsureCapacity(2);
+            _shape_options->Add(static_cast<System::Object*>(StringW("None").convert()));
+            _shape_options->Add(static_cast<System::Object*>(StringW("Cylinder").convert()));
         }
+
         return _shape_options;
     }
 
@@ -67,8 +69,8 @@ namespace AntiVertigo {
         _platform->UpdateSize();
     }
     StringW SettingsUI::get_shape() { return get_shape_options()[config.shape]; }
-    void SettingsUI::set_shape(StringW value) { 
-        config.shape = get_shape_options()->IndexOf(value); 
+    void SettingsUI::set_shape(StringW value) {
+        config.shape = get_shape_options()->IndexOf(static_cast<System::Object*>(StringW(value).convert()));
         SaveConfig();
         _platform->SetMesh();
     }
