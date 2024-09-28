@@ -12,6 +12,7 @@ ndkpath.txt
 *.ps1
 !build.ps1
 !createqmod.ps1
+!scripts/*.ps1
 
 .vscode
 .idea
