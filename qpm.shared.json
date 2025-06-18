@@ -1,6 +1,7 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.shared.schema.json",
   "config": {
-    "version": "0.1.0",
+    "version": "0.4.0",
     "sharedDir": "shared",
     "dependenciesDir": "extern",
     "info": {
@@ -33,6 +34,7 @@
           "pwsh ./scripts/createqmod.ps1 AntiVertigo -clean"
         ]
       },
+      "ndk": "^27.2.12479018",
       "qmodIncludeDirs": [],
       "qmodIncludeFiles": [],
       "qmodOutput": null
@@ -40,45 +42,40 @@
     "dependencies": [
       {
         "id": "beatsaber-hook",
-        "versionRange": "^5.1.9",
+        "versionRange": "^6.4.2",
         "additionalData": {}
       },
       {
         "id": "bs-cordl",
-        "versionRange": "^3700.0.0",
+        "versionRange": "4006.*",
         "additionalData": {}
       },
       {
         "id": "custom-types",
-        "versionRange": "^0.17.10",
+        "versionRange": "^0.18.3",
         "additionalData": {}
       },
       {
         "id": "scotland2",
-        "versionRange": "^0.1.4",
+        "versionRange": "^0.1.6",
         "additionalData": {
           "includeQmod": false,
           "private": true
         }
       },
       {
-        "id": "libil2cpp",
-        "versionRange": "^0.3.2",
-        "additionalData": {}
-      },
-      {
         "id": "lapiz",
-        "versionRange": "^0.2.12",
+        "versionRange": "^0.2.21",
         "additionalData": {}
       },
       {
         "id": "bsml",
-        "versionRange": "^0.4.43",
+        "versionRange": "^0.4.53",
         "additionalData": {}
       },
       {
-        "id": "paper",
-        "versionRange": "^3.6.4",
+        "id": "paper2_scotland2",
+        "versionRange": "^4.6.4",
         "additionalData": {}
       }
     ]
@@ -86,60 +83,14 @@
   "restoredDependencies": [
     {
       "dependency": {
-        "id": "paper",
-        "versionRange": "=3.6.4",
-        "additionalData": {
-          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v3.6.4/libpaperlog.so",
-          "debugSoLink": "https://github.com/Fernthedev/paperlog/releases/download/v3.6.4/debug_libpaperlog.so",
-          "overrideSoName": "libpaperlog.so",
-          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v3.6.4/paperlog.qmod",
-          "branchName": "version/v3_6_4",
-          "compileOptions": {
-            "systemIncludes": [
-              "shared/utfcpp/source"
-            ]
-          },
-          "cmake": false
-        }
-      },
-      "version": "3.6.4"
-    },
-    {
-      "dependency": {
-        "id": "libil2cpp",
-        "versionRange": "=0.3.2",
-        "additionalData": {
-          "headersOnly": true,
-          "cmake": false
-        }
-      },
-      "version": "0.3.2"
-    },
-    {
-      "dependency": {
-        "id": "bsml",
-        "versionRange": "=0.4.43",
-        "additionalData": {
-          "soLink": "https://github.com/RedBrumbler/Quest-BSML/releases/download/v0.4.43/libbsml.so",
-          "debugSoLink": "https://github.com/RedBrumbler/Quest-BSML/releases/download/v0.4.43/debug_libbsml.so",
-          "overrideSoName": "libbsml.so",
-          "modLink": "https://github.com/RedBrumbler/Quest-BSML/releases/download/v0.4.43/BSML.qmod",
-          "branchName": "version/v0_4_43",
-          "cmake": true
-        }
-      },
-      "version": "0.4.43"
-    },
-    {
-      "dependency": {
         "id": "custom-types",
-        "versionRange": "=0.17.10",
+        "versionRange": "=0.18.3",
         "additionalData": {
-          "soLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.10/libcustom-types.so",
-          "debugSoLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.10/debug_libcustom-types.so",
+          "soLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.18.3/libcustom-types.so",
+          "debugSoLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.18.3/debug_libcustom-types.so",
           "overrideSoName": "libcustom-types.so",
-          "modLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.10/CustomTypes.qmod",
-          "branchName": "version/v0_17_10",
+          "modLink": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.18.3/CustomTypes.qmod",
+          "branchName": "version/v0_18_3",
           "compileOptions": {
             "cppFlags": [
               "-Wno-invalid-offsetof"
@@ -148,26 +99,26 @@
           "cmake": true
         }
       },
-      "version": "0.17.10"
+      "version": "0.18.3"
     },
     {
       "dependency": {
         "id": "sombrero",
-        "versionRange": "=0.1.42",
+        "versionRange": "=0.1.43",
         "additionalData": {
           "headersOnly": true,
-          "branchName": "version/v0_1_42"
+          "branchName": "version/v0_1_43"
         }
       },
-      "version": "0.1.42"
+      "version": "0.1.43"
     },
     {
       "dependency": {
         "id": "bs-cordl",
-        "versionRange": "=3700.0.0",
+        "versionRange": "=4006.0.0",
         "additionalData": {
           "headersOnly": true,
-          "branchName": "version/v3700_0_0",
+          "branchName": "version/v4006_0_0",
           "compileOptions": {
             "includePaths": [
               "include"
@@ -177,72 +128,47 @@
               "-DNEED_UNSAFE_CSHARP",
               "-fdeclspec",
               "-DUNITY_2021",
-              "-DHAS_CODEGEN"
+              "-DHAS_CODEGEN",
+              "-Wno-invalid-offsetof"
             ]
           }
         }
       },
-      "version": "3700.0.0"
+      "version": "4006.0.0"
     },
     {
       "dependency": {
         "id": "lapiz",
-        "versionRange": "=0.2.12",
+        "versionRange": "=0.2.21",
         "additionalData": {
-          "soLink": "https://github.com/raineio/Lapiz/releases/download/v0.2.12/liblapiz.so",
-          "debugSoLink": "https://github.com/raineio/Lapiz/releases/download/v0.2.12/debug_liblapiz.so",
+          "soLink": "https://github.com/raineaeternal/Lapiz/releases/download/v0.2.21/liblapiz.so",
+          "debugSoLink": "https://github.com/raineaeternal/Lapiz/releases/download/v0.2.21/debug_liblapiz.so",
           "overrideSoName": "liblapiz.so",
-          "modLink": "https://github.com/raineio/Lapiz/releases/download/v0.2.12/Lapiz.qmod",
-          "branchName": "version/v0_2_12",
+          "modLink": "https://github.com/raineaeternal/Lapiz/releases/download/v0.2.21/Lapiz.qmod",
+          "branchName": "version/v0_2_21",
           "cmake": true
         }
       },
-      "version": "0.2.12"
+      "version": "0.2.21"
     },
     {
       "dependency": {
-        "id": "beatsaber-hook",
-        "versionRange": "=5.1.9",
+        "id": "paper2_scotland2",
+        "versionRange": "=4.6.4",
         "additionalData": {
-          "soLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v5.1.9/libbeatsaber-hook_5_1_9.so",
-          "debugSoLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v5.1.9/debug_libbeatsaber-hook_5_1_9.so",
-          "branchName": "version/v5_1_9",
-          "cmake": true
-        }
-      },
-      "version": "5.1.9"
-    },
-    {
-      "dependency": {
-        "id": "scotland2",
-        "versionRange": "=0.1.4",
-        "additionalData": {
-          "soLink": "https://github.com/sc2ad/scotland2/releases/download/v0.1.4/libsl2.so",
-          "debugSoLink": "https://github.com/sc2ad/scotland2/releases/download/v0.1.4/debug_libsl2.so",
-          "overrideSoName": "libsl2.so",
-          "branchName": "version/v0_1_4"
-        }
-      },
-      "version": "0.1.4"
-    },
-    {
-      "dependency": {
-        "id": "fmt",
-        "versionRange": "=10.0.0",
-        "additionalData": {
-          "headersOnly": true,
-          "branchName": "version/v10_0_0",
+          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.4/libpaper2_scotland2.so",
+          "overrideSoName": "libpaper2_scotland2.so",
+          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.4/paper2_scotland2.qmod",
+          "branchName": "version/v4_6_4",
           "compileOptions": {
             "systemIncludes": [
-              "fmt/include/"
-            ],
-            "cppFlags": [
-              "-DFMT_HEADER_ONLY"
+              "shared/utfcpp/source"
             ]
-          }
+          },
+          "cmake": false
         }
       },
-      "version": "10.0.0"
+      "version": "4.6.4"
     },
     {
       "dependency": {
@@ -258,6 +184,89 @@
         }
       },
       "version": "10.0.0"
+    },
+    {
+      "dependency": {
+        "id": "fmt",
+        "versionRange": "=11.0.2",
+        "additionalData": {
+          "headersOnly": true,
+          "branchName": "version/v11_0_2",
+          "compileOptions": {
+            "systemIncludes": [
+              "fmt/include/"
+            ],
+            "cppFlags": [
+              "-DFMT_HEADER_ONLY"
+            ]
+          }
+        }
+      },
+      "version": "11.0.2"
+    },
+    {
+      "dependency": {
+        "id": "beatsaber-hook",
+        "versionRange": "=6.4.2",
+        "additionalData": {
+          "soLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v6.4.2/libbeatsaber-hook.so",
+          "debugSoLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v6.4.2/debug_libbeatsaber-hook.so",
+          "overrideSoName": "libbeatsaber-hook.so",
+          "modLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v6.4.2/beatsaber-hook.qmod",
+          "branchName": "version/v6_4_2",
+          "compileOptions": {
+            "cppFlags": [
+              "-Wno-extra-qualification"
+            ]
+          },
+          "cmake": true
+        }
+      },
+      "version": "6.4.2"
+    },
+    {
+      "dependency": {
+        "id": "bsml",
+        "versionRange": "=0.4.53",
+        "additionalData": {
+          "soLink": "https://github.com/bsq-ports/Quest-BSML/releases/download/v0.4.53/libbsml.so",
+          "debugSoLink": "https://github.com/bsq-ports/Quest-BSML/releases/download/v0.4.53/debug_libbsml.so",
+          "overrideSoName": "libbsml.so",
+          "modLink": "https://github.com/bsq-ports/Quest-BSML/releases/download/v0.4.53/BSML.qmod",
+          "branchName": "version/v0_4_53",
+          "cmake": true
+        }
+      },
+      "version": "0.4.53"
+    },
+    {
+      "dependency": {
+        "id": "scotland2",
+        "versionRange": "=0.1.6",
+        "additionalData": {
+          "soLink": "https://github.com/sc2ad/scotland2/releases/download/v0.1.6/libsl2.so",
+          "debugSoLink": "https://github.com/sc2ad/scotland2/releases/download/v0.1.6/debug_libsl2.so",
+          "overrideSoName": "libsl2.so",
+          "branchName": "version/v0_1_6"
+        }
+      },
+      "version": "0.1.6"
+    },
+    {
+      "dependency": {
+        "id": "libil2cpp",
+        "versionRange": "=0.4.0",
+        "additionalData": {
+          "headersOnly": true,
+          "compileOptions": {
+            "systemIncludes": [
+              "il2cpp/external/baselib/Include",
+              "il2cpp/external/baselib/Platforms/Android/Include"
+            ]
+          }
+        }
+      },
+      "version": "0.4.0"
     }
   ]
 }

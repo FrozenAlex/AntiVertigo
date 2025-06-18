@@ -25,3 +25,4 @@ cmake-build-debug
 
 !release.ps1
 !releasedelete.ps1
+.cache/

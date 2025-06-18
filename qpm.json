@@ -1,4 +1,6 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.schema.json",
+  "version": "0.4.0",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "info": {
@@ -11,51 +13,6 @@
       "cmake": true
     }
   },
-  "dependencies": [
-    {
-      "id": "beatsaber-hook",
-      "versionRange": "^5.1.9",
-      "additionalData": {}
-    },
-    {
-      "id": "bs-cordl",
-      "versionRange": "^3700.0.0",
-      "additionalData": {}
-    },
-    {
-      "id": "custom-types",
-      "versionRange": "^0.17.10",
-      "additionalData": {}
-    },
-    {
-      "id": "scotland2",
-      "versionRange": "^0.1.4",
-      "additionalData": {
-        "includeQmod": false,
-        "private": true
-      }
-    },
-    {
-      "id": "libil2cpp",
-      "versionRange": "^0.3.2",
-      "additionalData": {}
-    },
-    {
-      "id": "lapiz",
-      "versionRange": "^0.2.12",
-      "additionalData": {}
-    },
-    {
-      "id": "bsml",
-      "versionRange": "^0.4.43",
-      "additionalData": {}
-    },
-    {
-      "id": "paper",
-      "versionRange": "^3.6.4",
-      "additionalData": {}
-    }
-  ],
   "workspace": {
     "scripts": {
       "build": [
@@ -75,6 +32,50 @@
         "qpm-rust qmod build",
         "pwsh ./scripts/createqmod.ps1 AntiVertigo -clean"
       ]
+    },
+    "ndk": "^27.2.12479018",
+    "qmodIncludeDirs": [],
+    "qmodIncludeFiles": [],
+    "qmodOutput": null
+  },
+  "dependencies": [
+    {
+      "id": "beatsaber-hook",
+      "versionRange": "^6.4.2",
+      "additionalData": {}
+    },
+    {
+      "id": "bs-cordl",
+      "versionRange": "4006.*",
+      "additionalData": {}
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "^0.18.3",
+      "additionalData": {}
+    },
+    {
+      "id": "scotland2",
+      "versionRange": "^0.1.6",
+      "additionalData": {
+        "includeQmod": false,
+        "private": true
+      }
+    },
+    {
+      "id": "lapiz",
+      "versionRange": "^0.2.21",
+      "additionalData": {}
+    },
+    {
+      "id": "bsml",
+      "versionRange": "^0.4.53",
+      "additionalData": {}
+    },
+    {
+      "id": "paper2_scotland2",
+      "versionRange": "^4.6.4",
+      "additionalData": {}
     }
-  }
+  ]
 }

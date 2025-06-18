@@ -10,9 +10,7 @@
 #include "Zenject/IInitializable.hpp"
 #include "System/IDisposable.hpp"
 
-#define SETTINGSUI_INTERFACES { classof(::System::IDisposable*), classof(::Zenject::IInitializable*) }
-
-___DECLARE_TYPE_WRAPPER_INHERITANCE(AntiVertigo, SettingsUI, Il2CppTypeEnum::IL2CPP_TYPE_CLASS, System::Object, "AntiVertigo", SETTINGSUI_INTERFACES, 0, nullptr,
+DECLARE_CLASS_CODEGEN_INTERFACES(AntiVertigo, SettingsUI, System::Object, ::System::IDisposable*, ::Zenject::IInitializable*) {
     DECLARE_INSTANCE_FIELD_PRIVATE(UnityEngine::Transform*, root);
     DECLARE_INSTANCE_FIELD_PRIVATE(VertigoPlatform*, _platform);
     DECLARE_INSTANCE_FIELD_PRIVATE(ListW<System::Object*>, _shape_options);
@@ -30,4 +28,4 @@ ___DECLARE_TYPE_WRAPPER_INHERITANCE(AntiVertigo, SettingsUI, Il2CppTypeEnum::IL2
     DECLARE_BSML_PROPERTY(float, zmin);
     DECLARE_BSML_PROPERTY(float, zmax);
     DECLARE_BSML_PROPERTY(StringW, shape);
-)
+};

@@ -5,7 +5,7 @@
 #include "UnityEngine/GameObject.hpp"
 #include "Zenject/IInitializable.hpp"
 
-DECLARE_CLASS_CODEGEN_INTERFACES(AntiVertigo, VertigoPlatform, UnityEngine::MonoBehaviour, classof(::Zenject::IInitializable*),
+DECLARE_CLASS_CODEGEN_INTERFACES(AntiVertigo, VertigoPlatform, UnityEngine::MonoBehaviour, ::Zenject::IInitializable*) {
     DECLARE_INSTANCE_FIELD(bool, inMenu);
     DECLARE_INSTANCE_FIELD(UnityEngine::GameObject*, cube);
     DECLARE_INSTANCE_FIELD(UnityEngine::GameObject*, cylinder);
@@ -19,4 +19,4 @@ DECLARE_CLASS_CODEGEN_INTERFACES(AntiVertigo, VertigoPlatform, UnityEngine::Mono
     DECLARE_INSTANCE_METHOD(void, SetMesh);
     DECLARE_INSTANCE_METHOD(void, CheckMaterials);
     DECLARE_OVERRIDE_METHOD_MATCH(void, Initialize, &Zenject::IInitializable::Initialize);
-)
+};
