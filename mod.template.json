@@ -6,7 +6,7 @@
     "author": "RedBrumbler",
     "version": "${version}",
     "packageId": "com.beatgames.beatsaber",
-    "packageVersion": "1.40.6_6407",
+    "packageVersion": "1.40.8_7379",
     "description": "Spawn a bigger base platform for people with vertigo so they can play comfortably, ${mod_id} v${version}",
     "coverImage": "cover.png",
     "dependencies": [],
